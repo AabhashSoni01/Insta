@@ -1,24 +1,14 @@
 import React from "react";
 import {
   FaBars,
-  FaCamera,
   FaColumns,
-  FaCompass,
-  FaGooglePlay,
-  FaGripLines,
-  FaHeart,
   FaHome,
-  FaPaperPlane,
-  FaPlayCircle,
   FaPlus,
   FaRegCompass,
   FaRegHeart,
   FaRegPaperPlane,
   FaRegPlayCircle,
-  FaRegPlusSquare,
   FaSearch,
-  FaSeedling,
-  FaTable,
   FaUser,
 } from "react-icons/fa";
 
@@ -26,14 +16,15 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="h-screen w-55 flex flex-col justify-between absolute left-0 top-0"
+      className="h-screen w-55 flex flex-col justify-between absolute left-0 top-0 border-r border-r-slate-800"
     >
-      <div className="first h-full w-full">
-        <div className="w-full h-full p-5">
+        {/* instagram */}
+      <div className="first w-full p-5">
+        <div className="w-full p-2 mt-5">
           <span className="p-2">
             <a
               href="#home"
-              className="text-3xl"
+              className="text-4xl"
               style={{ fontFamily: "Cookie" }}
             >
               Instagram
@@ -42,106 +33,107 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="second h-full w-full flex flex-col  p-2">
+        {/* menu */}
+      <div className="second w-full flex flex-col gap-8 my-10">
         <div>
-          <span className="p-2">
+          <span>
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-4 gap-3"
+              className="flex items-center text-md font-semibold mx-8 gap-3"
             >
               <span>
-                <FaHome size={20} />
+                <FaHome size={22} />
               </span>
               Home
             </a>
           </span>
         </div>
         <div>
-          <span className="p-2">
+          <span>
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-4 gap-3"
+              className="flex items-center text-md font-semibold mx-8 gap-3"
             >
               <span>
-                <FaSearch size={20} />
+                <FaSearch size={22} />
               </span>
               Search
             </a>
           </span>
         </div>
         <div>
-          <span className="p-2">
+          <span>
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-4 gap-3"
+              className="flex items-center text-md font-semibold mx-8 gap-3"
             >
               <span>
-                <FaRegCompass size={20} />
+                <FaRegCompass size={22} />
               </span>
               Explore
             </a>
           </span>
         </div>
         <div>
-          <span className="p-2">
+          <span>
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-4 gap-3"
+              className="flex items-center text-md font-semibold mx-8 gap-3"
             >
               <span>
-                <FaRegPlayCircle size={20} />
+                <FaRegPlayCircle size={22} />
               </span>
               Reels
             </a>
           </span>
         </div>
         <div>
-          <span className="p-2">
+          <span>
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-4 gap-3"
+              className="flex items-center text-md font-semibold mx-8 gap-3"
             >
               <span>
-                <FaRegPaperPlane size={20} />
+                <FaRegPaperPlane size={22} />
               </span>
               Messages
             </a>
           </span>
         </div>
         <div>
-          <span className="p-2">
+          <span>
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-4 gap-3"
+              className="flex items-center text-md font-semibold mx-8 gap-3"
             >
               <span>
-                <FaRegHeart size={20} />
+                <FaRegHeart size={22} />
               </span>
               Notifications
             </a>
           </span>
         </div>
         <div>
-          <span className="p-2">
+          <span>
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-4 gap-3"
+              className="flex items-center text-md font-semibold mx-8 gap-3"
             >
               <span>
-                <FaPlus size={20} />
+                <FaPlus size={22} />
               </span>
               Create
             </a>
           </span>
         </div>
         <div>
-          <span className="p-2">
+          <span>
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-4 gap-3"
+              className="flex items-center text-md font-semibold mx-8 gap-3"
             >
               <span>
-                <FaUser size={20} />
+                <FaUser size={22} />
               </span>
               Profile
             </a>
@@ -149,9 +141,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="third h-full w-full flex flex-col p-2 -my-5 bg-amber-800">
-        <div className="mx-4">
-          <div className="p-1">
+        {/* footer-menu */}
+      <div className="third w-full flex flex-col">
+        <div className="w-full flex flex-col gap-5 mx-8 font-semibold">
+          <div>
             <span>
               <a href="#" className="flex items-center gap-3">
                 <span>
@@ -161,7 +154,7 @@ const Home = () => {
               </a>
             </span>
           </div>
-          <div className="p-1">
+          <div className="mb-10">
             <span className="flex items-center gap-3">
               <FaColumns /> Also from Meta
             </span>
