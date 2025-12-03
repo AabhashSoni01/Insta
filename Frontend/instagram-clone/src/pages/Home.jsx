@@ -8,157 +8,66 @@ import {
   FaRegHeart,
   FaRegPaperPlane,
   FaRegPlayCircle,
+  FaRegUser,
   FaSearch,
-  FaUser,
 } from "react-icons/fa";
 
 const Home = () => {
+  // Define menu items array for cleaner code
+  const menuItems = [
+    { icon: <FaHome size={22} />, label: "Home" },
+    { icon: <FaSearch size={22} />, label: "Search" },
+    { icon: <FaRegCompass size={22} />, label: "Explore" },
+    { icon: <FaRegPlayCircle size={22} />, label: "Reels" },
+    { icon: <FaRegPaperPlane size={22} />, label: "Messages" },
+    { icon: <FaRegHeart size={22} />, label: "Notifications" },
+    { icon: <FaPlus size={22} />, label: "Create" },
+    { icon: <FaRegUser size={22} />, label: "Profile" },
+  ];
+
   return (
     <div
       id="home"
-      className="h-screen w-55 flex flex-col justify-between absolute left-0 top-0 border-r border-r-slate-800"
+      className="h-screen w-56 flex flex-col justify-between absolute left-0 top-0 border-r border-r-slate-800 bg-black text-white"
     >
-        {/* instagram */}
+      {/* Instagram Logo */}
       <div className="first w-full p-5">
         <div className="w-full p-2 mt-5">
-          <span className="p-2">
-            <a
-              href="#home"
-              className="text-4xl"
-              style={{ fontFamily: "Cookie" }}
-            >
-              Instagram
-            </a>
-          </span>
+          <a
+            href="#home"
+            className="text-4xl block p-2"
+            style={{ fontFamily: "Cookie" }}
+          >
+            Instagram
+          </a>
         </div>
       </div>
 
-        {/* menu */}
-      <div className="second w-full flex flex-col gap-8 my-10">
-        <div>
-          <span>
+      {/* Menu Items (Mapped) */}
+      <div className="second w-full flex flex-col"> 
+        {menuItems.map((item, index) => (
+          <div key={index} className="p-3 mx-2 hover:bg-gray-900 rounded-2xl transition-all duration-200 group cursor-pointer">
             <a
               href="#home"
-              className="flex items-center text-md font-semibold mx-8 gap-3"
+              className="flex items-center text-md font-semibold gap-4 group-hover:scale-105 transition-transform"
             >
-              <span>
-                <FaHome size={22} />
-              </span>
-              Home
+              <span>{item.icon}</span>
+              <span>{item.label}</span>
             </a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <a
-              href="#home"
-              className="flex items-center text-md font-semibold mx-8 gap-3"
-            >
-              <span>
-                <FaSearch size={22} />
-              </span>
-              Search
-            </a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <a
-              href="#home"
-              className="flex items-center text-md font-semibold mx-8 gap-3"
-            >
-              <span>
-                <FaRegCompass size={22} />
-              </span>
-              Explore
-            </a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <a
-              href="#home"
-              className="flex items-center text-md font-semibold mx-8 gap-3"
-            >
-              <span>
-                <FaRegPlayCircle size={22} />
-              </span>
-              Reels
-            </a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <a
-              href="#home"
-              className="flex items-center text-md font-semibold mx-8 gap-3"
-            >
-              <span>
-                <FaRegPaperPlane size={22} />
-              </span>
-              Messages
-            </a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <a
-              href="#home"
-              className="flex items-center text-md font-semibold mx-8 gap-3"
-            >
-              <span>
-                <FaRegHeart size={22} />
-              </span>
-              Notifications
-            </a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <a
-              href="#home"
-              className="flex items-center text-md font-semibold mx-8 gap-3"
-            >
-              <span>
-                <FaPlus size={22} />
-              </span>
-              Create
-            </a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <a
-              href="#home"
-              className="flex items-center text-md font-semibold mx-8 gap-3"
-            >
-              <span>
-                <FaUser size={22} />
-              </span>
-              Profile
-            </a>
-          </span>
-        </div>
+          </div>
+        ))}
       </div>
 
-        {/* footer-menu */}
-      <div className="third w-full flex flex-col">
-        <div className="w-full flex flex-col gap-5 mx-8 font-semibold">
-          <div>
-            <span>
-              <a href="#" className="flex items-center gap-3">
-                <span>
-                  <FaBars />
-                </span>
-                <span className="font-semibold">More</span>
-              </a>
-            </span>
-          </div>
-          <div className="mb-10">
-            <span className="flex items-center gap-3">
-              <FaColumns /> Also from Meta
-            </span>
-          </div>
+      {/* Footer Menu */}
+      <div className="third w-full flex flex-col p-4 mb-4">
+        <div className="flex flex-col gap-4 mx-4 font-semibold">
+          <a href="#" className="flex items-center gap-4 hover:bg-gray-900 p-3 rounded-2xl -ml-3 transition-colors">
+            <FaBars size={22} />
+            <span>More</span>
+          </a>
+          <span className="flex items-center gap-2 text-sm text-gray-400">
+            <FaColumns /> Also from Meta
+          </span>
         </div>
       </div>
     </div>
